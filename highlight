@@ -2,12 +2,26 @@
 # Author: Roger Tu
 # Date: 2012-08-15
 
-# NOTE: not a good idea to do searches consisting of single digit numbers
+# NOTE: Not a good idea to do searches consisting of single digit numbers
+
+export BOLD_FONT=`tput bold`
+export RESET_ALL="\e[0m"
+export REVERSE=`tput rev`
+
+export FOREGROUND_BLACK=`tput setaf 0`
+export FOREGROUND_RED=`tput setaf 1`
+export FOREGROUND_GREEN=`tput setaf 2`
+export FOREGROUND_YELLOW=`tput setaf 3`
+export FOREGROUND_BLUE=`tput setaf 4`
+export FOREGROUND_PURPLE=`tput setaf 5`
+export FOREGROUND_CYAN=`tput setaf 6`
+export FOREGROUND_WHITE=`tput setaf 7`
+export FOREGROUND_ORANGE=`tput setaf 202`
 
 trap reset_highlight_colors SIGINT
 function reset_highlight_colors
 {
-    echo -e "\033[0m"
+    tput sgr0
 }
 
 function print_help
@@ -43,7 +57,7 @@ function print_help
 
 function print_error
 {
-    echo "Error: -$OPTARG requires a search string" >&2
+    echo "Error: -${OPTARG} requires a search string" >&2
     exit 1
 }
 
@@ -77,75 +91,75 @@ do
             ;;
         k)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;30m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_BLACK}$&${RESET_ALL}"
             ;;
         K)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;30m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLACK}$&${RESET_ALL}"
             ;;
         r)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;31m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_RED}$&${RESET_ALL}"
             ;;
         R)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;31m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_RED}$&${RESET_ALL}"
             ;;
         g)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;32m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_GREEN}$&${RESET_ALL}"
             ;;
         G)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;32m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_GREEN}$&${RESET_ALL}"
             ;;
         y)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;33m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_YELLOW}$&${RESET_ALL}"
             ;;
         Y)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;33m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_YELLOW}$&${RESET_ALL}"
             ;;
         b)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;34m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_BLUE}$&${RESET_ALL}"
             ;;
         B)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;34m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLUE}$&${RESET_ALL}"
             ;;
         p)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;35m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_PURPLE}$&${RESET_ALL}"
             ;;
         P)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;35m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_PURPLE}$&${RESET_ALL}"
             ;;
         c)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;36m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_CYAN}$&${RESET_ALL}"
             ;;
         C)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;36m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_CYAN}$&${RESET_ALL}"
             ;;
         w)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;37m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_WHITE}$&${RESET_ALL}"
             ;;
         W)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;37m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_WHITE}$&${RESET_ALL}"
             ;;
         o)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[0;38;5;202m$&\e[0m"
+            COLOR_STRING="${FOREGROUND_ORANGE}$&${RESET_ALL}"
             ;;
         O)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="\e[1;38;5;202m$&\e[0m"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_ORANGE}$&${RESET_ALL}"
             ;;
         \?)
             print_help
@@ -158,7 +172,7 @@ do
     if [ -z "${BLEED_JUST_SET}" -o -z "${INVERSE_JUST_SET}" ]
     then
         # Build up the whole replacement string
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}${COLOR_STRING}${REPLACEMENT_POSTFIX}
+        FULL_REPLACEMENT_STRING="${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}${COLOR_STRING}${REPLACEMENT_POSTFIX}"
     fi
 done
 shift $(($OPTIND-1))
@@ -175,7 +189,7 @@ then
 fi
 if [ -n "${INVERSE_MODE}" ]
 then
-    FULL_REPLACEMENT_STRING=$(echo "${FULL_REPLACEMENT_STRING}" | perl -pe 's/\\e\[[01];/\\e\[7;/g')
+    FULL_REPLACEMENT_STRING="${REVERSE}${FULL_REPLACEMENT_STRING}"
 fi
 
 perl -pe "${FULL_REPLACEMENT_STRING}"
