@@ -5,8 +5,9 @@
 # NOTE: Not a good idea to do searches consisting of single digit numbers
 
 export BOLD_FONT=`tput bold`
-export RESET_ALL="\e[0m"
-export REVERSE=`tput rev`
+export RESET_ALL=`tput sgr0`
+export REVERSE_ON=`tput smso`
+export REVERSE_OFF=`tput rmso`
 
 export FOREGROUND_BLACK=`tput setaf 0`
 export FOREGROUND_RED=`tput setaf 1`
@@ -72,94 +73,95 @@ REPLACEMENT_POSTFIX='/g;'
 
 FULL_REPLACEMENT_STRING=''
 
+BLEED_MODE=0
+INVERSE_MODE=0
+
 while getopts ':ixk:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
 do
     SEARCH_STRING=''
     COLOR_STRING='$&'
 
-    BLEED_JUST_SET=""
-    INVERSE_JUST_SET=""
+    BLEED_JUST_SET=0
+    INVERSE_JUST_SET=0
 
     case ${COLOR} in
         x)
-            BLEED_MODE=0
-            BLEED_JUST_SET=0
+            BLEED_JUST_SET=1
             ;;
         i)
-            INVERSE_MODE=0
-            INVERSE_JUST_SET=0
+            INVERSE_JUST_SET=1
             ;;
         k)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_BLACK}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_BLACK}$&"
             ;;
         K)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLACK}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLACK}$&"
             ;;
         r)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_RED}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_RED}$&"
             ;;
         R)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_RED}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_RED}$&"
             ;;
         g)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_GREEN}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_GREEN}$&"
             ;;
         G)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_GREEN}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_GREEN}$&"
             ;;
         y)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_YELLOW}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_YELLOW}$&"
             ;;
         Y)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_YELLOW}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_YELLOW}$&"
             ;;
         b)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_BLUE}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_BLUE}$&"
             ;;
         B)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLUE}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_BLUE}$&"
             ;;
         p)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_PURPLE}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_PURPLE}$&"
             ;;
         P)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_PURPLE}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_PURPLE}$&"
             ;;
         c)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_CYAN}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_CYAN}$&"
             ;;
         C)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_CYAN}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_CYAN}$&"
             ;;
         w)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_WHITE}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_WHITE}$&"
             ;;
         W)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_WHITE}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_WHITE}$&"
             ;;
         o)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_ORANGE}$&${RESET_ALL}"
+            COLOR_STRING="${FOREGROUND_ORANGE}$&"
             ;;
         O)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_ORANGE}$&${RESET_ALL}"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_ORANGE}$&"
             ;;
         \?)
             print_help
@@ -169,11 +171,58 @@ do
             ;;
     esac
 
-    if [ -z "${BLEED_JUST_SET}" -o -z "${INVERSE_JUST_SET}" ]
+    if [ ${BLEED_JUST_SET} -eq 1 ]
     then
-        # Build up the whole replacement string
-        FULL_REPLACEMENT_STRING="${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}${COLOR_STRING}${REPLACEMENT_POSTFIX}"
+        # Toggle BLEED_MODE
+        if [ ${BLEED_MODE} -eq 0 ]
+        then
+            BLEED_MODE=1
+        else
+            BLEED_MODE=0
+        fi
     fi
+
+    if [ ${INVERSE_JUST_SET} -eq 1 ]
+    then
+        # Toggle INVERSE_MODE
+        if [ ${INVERSE_MODE} -eq 0 ]
+        then
+            INVERSE_MODE=1
+        else
+            INVERSE_MODE=0
+        fi
+    fi
+
+    # Begin building the full replacement string
+    if [ ${INVERSE_MODE} -eq 0 ]
+    then
+        #FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_OFF}
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}
+    fi
+    if [ ${INVERSE_MODE} -eq 1 ]
+    then
+        #FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_ON}
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}
+    fi
+
+    # If we did not just change bleed or inverse modes, then actually replace some strings
+    if [ ${BLEED_JUST_SET} -eq 0 -a ${INVERSE_JUST_SET} -eq 0 ]
+    then
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}${COLOR_STRING}
+    fi
+
+    # If we are not bleeding colors, then reset the color back to normal
+    if [ ${BLEED_MODE} -eq 0 ]
+    then
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${RESET_ALL}
+    fi
+
+    # If we did not just change bleed or inverse modes, then actually replace some strings
+    if [ ${BLEED_JUST_SET} -eq 0 -a ${INVERSE_JUST_SET} -eq 0 ]
+    then
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_POSTFIX}
+    fi
+
 done
 shift $(($OPTIND-1))
 
@@ -181,15 +230,6 @@ if [ $# -gt 0 ];
 then
     echo 'this is happening?'
     print_help
-fi
-
-if [ -n "${BLEED_MODE}" ]
-then
-    FULL_REPLACEMENT_STRING=$(echo "${FULL_REPLACEMENT_STRING}" | perl -pe 's/\\e\[0m//g')
-fi
-if [ -n "${INVERSE_MODE}" ]
-then
-    FULL_REPLACEMENT_STRING="${REVERSE}${FULL_REPLACEMENT_STRING}"
 fi
 
 perl -pe "${FULL_REPLACEMENT_STRING}"
