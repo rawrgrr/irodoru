@@ -5,9 +5,14 @@
 # NOTE: Not a good idea to do searches consisting of single digit numbers
 
 export BOLD_FONT=`tput bold`
+export DIM_FONT=`tput dim`
 export RESET_ALL=`tput sgr0`
+export INVISIBLE_ON=`tput invis`
+export INVISIBLE_OFF=`tput sgr0`
 export REVERSE_ON=`tput smso`
 export REVERSE_OFF=`tput rmso`
+export UNDERLINE_ON=`tput smul`
+export UNDERLINE_OFF=`tput rmul`
 
 export FOREGROUND_BLACK=`tput setaf 0`
 export FOREGROUND_RED=`tput setaf 1`
@@ -22,7 +27,7 @@ export FOREGROUND_ORANGE=`tput setaf 202`
 trap reset_highlight_colors SIGINT
 function reset_highlight_colors
 {
-    tput sgr0
+    echo -e "${RESET_ALL}"
 }
 
 function print_help
@@ -46,12 +51,15 @@ function print_help
             -P bold purple
             -C bold cyan
             -W bold white
+        Miscellaneous flags:
+            -x invisible mode
         Other colors flags (Must have 256-color terminal enabled):
             -o normal orange
             -O bold orange
         Optional modifiers:
-            -i inverse mode
-            -x do not reset formatting at end of line"
+            -u underline mode
+            -v reverse mode
+            -z do not reset formatting at end of line"
 
     exit 1
 }
@@ -74,22 +82,31 @@ REPLACEMENT_POSTFIX='/g;'
 FULL_REPLACEMENT_STRING=''
 
 BLEED_MODE=0
-INVERSE_MODE=0
+REVERSE_MODE=0
+UNDERLINE_MODE=0
 
-while getopts ':ixk:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
+while getopts ':uvzx:k:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
 do
     SEARCH_STRING=''
     COLOR_STRING='$&'
 
     BLEED_JUST_SET=0
-    INVERSE_JUST_SET=0
+    REVERSE_JUST_SET=0
+    UNDERLINE_JUST_SET=0
 
     case ${COLOR} in
-        x)
+        u)
+            UNDERLINE_JUST_SET=1
+            ;;
+        v)
+            REVERSE_JUST_SET=1
+            ;;
+        z)
             BLEED_JUST_SET=1
             ;;
-        i)
-            INVERSE_JUST_SET=1
+        x)
+            SEARCH_STRING=${OPTARG}
+            COLOR_STRING="${INVISIBLE_ON}$&${INVISIBLE_OFF}"
             ;;
         k)
             SEARCH_STRING=${OPTARG}
@@ -182,45 +199,69 @@ do
         fi
     fi
 
-    if [ ${INVERSE_JUST_SET} -eq 1 ]
+    # Begin building the full replacement string
+    # If we did not just change bleed or inverse modes, then actually replace some strings
+    if [ ${BLEED_JUST_SET} -eq 0 -a ${REVERSE_JUST_SET} -eq 0 -a ${UNDERLINE_JUST_SET} -eq 0 ]
     then
-        # Toggle INVERSE_MODE
-        if [ ${INVERSE_MODE} -eq 0 ]
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}
+
+        # Reverse Mode
+        if [ ${REVERSE_MODE} -eq 0 ]
         then
-            INVERSE_MODE=1
+            FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_OFF}
+        fi
+        if [ ${REVERSE_MODE} -eq 1 ]
+        then
+            FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_ON}
+            REVERSE_MODE=0
+        fi
+
+        # Underline Mode
+        if [ ${UNDERLINE_MODE} -eq 0 ]
+        then
+            FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${UNDERLINE_OFF}
+        fi
+        if [ ${UNDERLINE_MODE} -eq 1 ]
+        then
+            FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${UNDERLINE_ON}
+            UNDERLINE_MODE=0
+        fi
+
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${COLOR_STRING}
+
+        # If we are not bleeding colors, then reset the color back to normal
+        if [ ${BLEED_MODE} -eq 0 ]
+        then
+            FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${RESET_ALL}
+        fi
+        if [ ${BLEED_MODE} -eq 1 ]
+        then
+            BLEED_MODE=0
+        fi
+
+        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_POSTFIX}
+    fi
+
+    # Toggle REVERSE_MODE
+    if [ ${REVERSE_JUST_SET} -eq 1 ]
+    then
+        if [ ${REVERSE_MODE} -eq 0 ]
+        then
+            REVERSE_MODE=1
         else
-            INVERSE_MODE=0
+            REVERSE_MODE=0
         fi
     fi
 
-    # Begin building the full replacement string
-    if [ ${INVERSE_MODE} -eq 0 ]
+    # Toggle UNDERLINE_MODE
+    if [ ${UNDERLINE_JUST_SET} -eq 1 ]
     then
-        #FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_OFF}
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}
-    fi
-    if [ ${INVERSE_MODE} -eq 1 ]
-    then
-        #FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REVERSE_ON}
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}
-    fi
-
-    # If we did not just change bleed or inverse modes, then actually replace some strings
-    if [ ${BLEED_JUST_SET} -eq 0 -a ${INVERSE_JUST_SET} -eq 0 ]
-    then
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}${COLOR_STRING}
-    fi
-
-    # If we are not bleeding colors, then reset the color back to normal
-    if [ ${BLEED_MODE} -eq 0 ]
-    then
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${RESET_ALL}
-    fi
-
-    # If we did not just change bleed or inverse modes, then actually replace some strings
-    if [ ${BLEED_JUST_SET} -eq 0 -a ${INVERSE_JUST_SET} -eq 0 ]
-    then
-        FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_POSTFIX}
+        if [ ${UNDERLINE_MODE} -eq 0 ]
+        then
+            UNDERLINE_MODE=1
+        else
+            UNDERLINE_MODE=0
+        fi
     fi
 
 done
