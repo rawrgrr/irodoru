@@ -51,7 +51,8 @@ function print_help
             -P bold purple
             -C bold cyan
             -W bold white
-        Miscellaneous flags:
+        Miscellaneous color flags:
+            -n normal color mode
             -x invisible mode
         Other colors flags (Must have 256-color terminal enabled):
             -o normal orange
@@ -85,7 +86,7 @@ BLEED_MODE=0
 REVERSE_MODE=0
 UNDERLINE_MODE=0
 
-while getopts ':uvzx:k:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
+while getopts ':uvzn:x:k:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
 do
     SEARCH_STRING=''
     COLOR_STRING='$&'
@@ -103,6 +104,10 @@ do
             ;;
         z)
             BLEED_JUST_SET=1
+            ;;
+        n)
+            SEARCH_STRING=${OPTARG}
+            COLOR_STRING="$&"
             ;;
         x)
             SEARCH_STRING=${OPTARG}
