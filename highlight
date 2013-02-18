@@ -5,12 +5,11 @@
 # NOTE: Not a good idea to do searches consisting of single digit numbers
 
 export BOLD_FONT=`tput bold`
-export DIM_FONT=`tput dim`
 export RESET_ALL=`tput sgr0`
 export INVISIBLE_ON=`tput invis`
-export INVISIBLE_OFF=`tput sgr0`
-export REVERSE_ON=`tput smso`
-export REVERSE_OFF=`tput rmso`
+export INVISIBLE_OFF=${RESET_ALL}
+export REVERSE_ON=`tput rev`
+export REVERSE_OFF=${RESET_ALL}
 export UNDERLINE_ON=`tput smul`
 export UNDERLINE_OFF=`tput rmul`
 
@@ -19,7 +18,7 @@ export FOREGROUND_RED=`tput setaf 1`
 export FOREGROUND_GREEN=`tput setaf 2`
 export FOREGROUND_YELLOW=`tput setaf 3`
 export FOREGROUND_BLUE=`tput setaf 4`
-export FOREGROUND_PURPLE=`tput setaf 5`
+export FOREGROUND_MAGENTA=`tput setaf 5`
 export FOREGROUND_CYAN=`tput setaf 6`
 export FOREGROUND_WHITE=`tput setaf 7`
 export FOREGROUND_ORANGE=`tput setaf 202`
@@ -39,7 +38,7 @@ function print_help
             -g normal green
             -y normal yellow
             -b normal blue
-            -p normal purple
+            -m normal magenta
             -c normal cyan
             -w normal white
         Bold color flags:
@@ -48,11 +47,11 @@ function print_help
             -G bold green
             -Y bold yellow
             -B bold blue
-            -P bold purple
+            -M bold magenta
             -C bold cyan
             -W bold white
         Miscellaneous color flags:
-            -n normal color mode
+            -n no color mode
             -x invisible mode
         Other colors flags (Must have 256-color terminal enabled):
             -o normal orange
@@ -86,7 +85,7 @@ BLEED_MODE=0
 REVERSE_MODE=0
 UNDERLINE_MODE=0
 
-while getopts ':uvzn:x:k:K:r:R:g:G:y:Y:b:B:p:P:c:C:w:W:o:O:' COLOR
+while getopts ':uvzn:x:k:K:r:R:g:G:y:Y:b:B:m:M:c:C:w:W:o:O:' COLOR
 do
     SEARCH_STRING=''
     COLOR_STRING='$&'
@@ -155,11 +154,11 @@ do
             ;;
         p)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${FOREGROUND_PURPLE}$&"
+            COLOR_STRING="${FOREGROUND_MAGENTA}$&"
             ;;
         P)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="${BOLD_FONT}${FOREGROUND_PURPLE}$&"
+            COLOR_STRING="${BOLD_FONT}${FOREGROUND_MAGENTA}$&"
             ;;
         c)
             SEARCH_STRING=${OPTARG}
@@ -205,7 +204,7 @@ do
     fi
 
     # Begin building the full replacement string
-    # If we did not just change bleed or inverse modes, then actually replace some strings
+    # If we did not just change bleed, inverse, underline modes, then actually replace some strings
     if [ ${BLEED_JUST_SET} -eq 0 -a ${REVERSE_JUST_SET} -eq 0 -a ${UNDERLINE_JUST_SET} -eq 0 ]
     then
         FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_PREFIX}${SEARCH_STRING}${REPLACEMENT_DELIMITER}
@@ -247,26 +246,16 @@ do
         FULL_REPLACEMENT_STRING=${FULL_REPLACEMENT_STRING}${REPLACEMENT_POSTFIX}
     fi
 
-    # Toggle REVERSE_MODE
+    # Turn on REVERSE_MODE
     if [ ${REVERSE_JUST_SET} -eq 1 ]
     then
-        if [ ${REVERSE_MODE} -eq 0 ]
-        then
-            REVERSE_MODE=1
-        else
-            REVERSE_MODE=0
-        fi
+        REVERSE_MODE=1
     fi
 
-    # Toggle UNDERLINE_MODE
+    # Turn on UNDERLINE_MODE
     if [ ${UNDERLINE_JUST_SET} -eq 1 ]
     then
-        if [ ${UNDERLINE_MODE} -eq 0 ]
-        then
-            UNDERLINE_MODE=1
-        else
-            UNDERLINE_MODE=0
-        fi
+        UNDERLINE_MODE=1
     fi
 
 done
@@ -274,7 +263,7 @@ shift $(($OPTIND-1))
 
 if [ $# -gt 0 ];
 then
-    echo 'this is happening?'
+    echo 'Error parsing options' >&2
     print_help
 fi
 
