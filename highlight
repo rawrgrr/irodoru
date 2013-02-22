@@ -57,6 +57,7 @@ function print_help
             -o normal orange
             -O bold orange
         Optional modifiers:
+            -d delete mode
             -u underline mode
             -v reverse mode
             -z do not reset formatting at end of line"
@@ -85,7 +86,7 @@ BLEED_MODE=0
 REVERSE_MODE=0
 UNDERLINE_MODE=0
 
-while getopts ':uvzn:x:k:K:r:R:g:G:y:Y:b:B:m:M:c:C:w:W:o:O:' COLOR
+while getopts ':uvzd:n:x:k:K:r:R:g:G:y:Y:b:B:m:M:c:C:w:W:o:O:' COLOR
 do
     SEARCH_STRING=''
     COLOR_STRING='$&'
@@ -104,9 +105,13 @@ do
         z)
             BLEED_JUST_SET=1
             ;;
+        d)
+            SEARCH_STRING=${OPTARG}
+            COLOR_STRING=''
+            ;;
         n)
             SEARCH_STRING=${OPTARG}
-            COLOR_STRING="$&"
+            COLOR_STRING='$&'
             ;;
         x)
             SEARCH_STRING=${OPTARG}
