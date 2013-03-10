@@ -30,162 +30,269 @@ export FOREGROUND_BRIGHT_MAGENTA=`tput setaf 13`
 export FOREGROUND_BRIGHT_CYAN=`tput setaf 14`
 export FOREGROUND_BRIGHT_WHITE=`tput setaf 15`
 
-export FOREGROUND_BLACK2=`tput setaf 16`
-
-export FOREGROUND_BLUE_5=`tput setaf 17`
-export FOREGROUND_BLUE_4=`tput setaf 18` # MidnightBlue
+export FOREGROUND_GRAY_0=`tput setaf 16`
+export FOREGROUND_NAVY_BLUE=`tput setaf 17`
+export FOREGROUND_DARK_BLUE=`tput setaf 18` # MidnightBlue
 export FOREGROUND_BLUE_3=`tput setaf 19`
 
 export FOREGROUND_BLUE_2=`tput setaf 20`
 export FOREGROUND_BLUE_1=`tput setaf 21`
-export FOREGROUND_GREEN_5=`tput setaf 22`
-export FOREGROUND_CYAN_5=`tput setaf 23`
-export FOREGROUND_STEEL_BLUE=`tput setaf 24`
-export FOREGROUND_SAPPHIRE_BLUE=`tput setaf 25`
-export FOREGROUND_ELECTRIC_BLUE=`tput setaf 26`
-export FOREGROUND_ROYAL_BLUE=`tput setaf 27` # DodgerBlue
+export FOREGROUND_DARK_GREEN=`tput setaf 22`
+export FOREGROUND_DEEP_SKY_BLUE_4_3=`tput setaf 23` # CYAN5
+export FOREGROUND_DEEP_SKY_BLUE_4_2=`tput setaf 24`
+export FOREGROUND_DEEP_SKY_BLUE_4=`tput setaf 25`
+export FOREGROUND_DODGER_BLUE_3=`tput setaf 26`
+export FOREGROUND_DODGER_BLUE_2=`tput setaf 27` # DodgerBlue
 export FOREGROUND_GREEN_4=`tput setaf 28` # Forest Green
-export FOREGROUND_SEA_GREEN=`tput setaf 29`
+export FOREGROUND_SPRING_GREEN_4=`tput setaf 29`
 
-export FOREGROUND_CYAN_4=`tput setaf 30`
-export FOREGROUND_LIGHT_SEA_GREEN=`tput setaf 31` # LightSeaGreen/Aqua
-export FOREGROUND_AZURE=`tput setaf 32`
-export FOREGROUND_DEEP_SKY_BLUE=`tput setaf 33` # LightDodgerBlue
+export FOREGROUND_TURQUOISE_4=`tput setaf 30`
+export FOREGROUND_DEEP_SKY_BLUE_3_2=`tput setaf 31` # LightSeaGreen/Aqua
+export FOREGROUND_DEEP_SKY_BLUE_3=`tput setaf 32`
+export FOREGROUND_DODGER_BLUE_1=`tput setaf 33` # LightDodgerBlue
 export FOREGROUND_GREEN_3=`tput setaf 34`
-export FOREGROUND_VERIDIAN=`tput setaf 35`
-export FOREGROUND_MEDIUM_SEA_GREEN=`tput setaf 36` # CaribbeanGreen
-export FOREGROUND_CYAN_3=`tput setaf 37` # LightSeaGreen
-export FOREGROUND_SPANISH_SKY_BLUE=`tput setaf 38`
-export FOREGROUND_SKY_BLUE=`tput setaf 39`
+export FOREGROUND_SPRING_GREEN_3_2=`tput setaf 35`
+export FOREGROUND_DARK_CYAN=`tput setaf 36` # CaribbeanGreen
+export FOREGROUND_LIGHT_SEA_GREEN=`tput setaf 37` # LightSeaGreen
+export FOREGROUND_DEEP_SKY_BLUE_2=`tput setaf 38`
+export FOREGROUND_DEEP_SKY_BLUE_1=`tput setaf 39`
 
 export FOREGROUND_GREEN_2=`tput setaf 40` # LimeGreen
-export FOREGROUND_MALACHITE=`tput setaf 41`
-export FOREGROUN_UFO_GREEN=`tput setaf 42`
-export FOREGROUND_AQUA=`tput setaf 43`
-export FOREGROUND_CYAN_2=`tput setaf 44`
-export FOREGROUND_VIVID_SKY_BLUE=`tput setaf 45`
+export FOREGROUND_SPRING_GREEN_3=`tput setaf 41`
+export FOREGROUND_SPRING_GREEN_2_2=`tput setaf 42`
+export FOREGROUND_CYAN_3=`tput setaf 43`
+export FOREGROUND_DARK_TURQUOISE=`tput setaf 44`
+export FOREGROUND_TURQUOISE_2=`tput setaf 45`
 export FOREGROUND_GREEN_1=`tput setaf 46`
-export FOREGROUND_LIGHT_GREEN=`tput setaf 47`
-export FOREGROUND_BRIGHT_SEA_GREEN=`tput setaf 48`
-export FOREGROUND_TURQUOISE_BLUE=`tput setaf 49`
+export FOREGROUND_SPRING_GREEN_2=`tput setaf 47`
+export FOREGROUND_SPRING_GREEN_1=`tput setaf 48`
+export FOREGROUND_MEDIUM_SPRING_GREEN=`tput setaf 49`
 
-export FOREGROUND_TURQUOISE=`tput setaf 50`
+export FOREGROUND_CYAN_2=`tput setaf 50`
 export FOREGROUND_CYAN_1=`tput setaf 51`
-export FOREGROUND_RED_5=`tput setaf 52`
-export FOREGROUND_MAGENTA_5=`tput setaf 53`
-export FOREGROUND_PURPLE_HEART=`tput setaf 54`
-export FOREGROUND_INDIGO=`tput setaf 55`
-export FOREGROUND_NAVY_PURPLE=`tput setaf 56`
+export FOREGROUND_DARK_RED=`tput setaf 52`
+export FOREGROUND_DEEP_PINK_5=`tput setaf 53`
+export FOREGROUND_PURPLE_4_2=`tput setaf 54`
+export FOREGROUND_PURPLE_4=`tput setaf 55`
+export FOREGROUND_PURPLE_3=`tput setaf 56`
 export FOREGORUND_BLUE_VIOLET=`tput setaf 57`
-export FOREGROUND_YELLOW_5=`tput setaf 58` # Dark Olive Green
-export FOREGROUND_DARK_GRAY=`tput setaf 59`
+export FOREGROUND_ORANGE_4=`tput setaf 58` # Dark Olive Green
+export FOREGROUND_GRAY_37=`tput setaf 59`
 
-export FOREGROUND_DARK_SLATE_BLUE=`tput setaf 60`
-export FOREGROUND_DARK_BLUE_GRAY=`tput setaf 61`
-export FOREGROUND_SLATE_BLUE=`tput setaf 62`
-export FOREGROUND_IRIS_BLUE=`tput setaf 63`
-export FOREGROUND_OLIVE_DRAB=`tput setaf 64`
-export FOREGROUND_FERN_GREEN=`tput setaf 65`
-export FOREGROUND_COLUMBIA_BLUE=`tput setaf 66`
-export FOREGROUND_CADET_BLUE=`tput setaf 67`
-export FOREGROUND_MAYA_BLUE=`tput setaf 68`
-export FOREGROUND_CORN_FLOWER=`tput setaf 69`
+export FOREGROUND_MEDIUM_PURPLE_4=`tput setaf 60`
+export FOREGROUND_SLATE_BLUE_3=`tput setaf 61`
+export FOREGROUND_SLATE_BLUE_2=`tput setaf 62`
+export FOREGROUND_ROYAL_BLUE=`tput setaf 63`
+export FOREGROUND_CHARTREUSE_4=`tput setaf 64`
+export FOREGROUND_DARK_SEA_GREEN_4_2=`tput setaf 65`
+export FOREGROUND_PALE_TURQUOISE_2=`tput setaf 66`
+export FOREGROUND_STEEL_BLUE=`tput setaf 67`
+export FOREGROUND_STEEL_BLUE_3=`tput setaf 68`
+export FOREGROUND_CORN_FLOWER_BLUE=`tput setaf 69`
 
-export FOREGROUND_LIME_GREEN=`tput setaf 70`
-export FOREGROUND_MANTIS=`tput setaf 71`
-export FOREGROUND_MEDIUM_AQUAMARIN=`tput setaf 79`
+export FOREGROUND_CHARTREUSE_3=`tput setaf 70`
+export FOREGROUND_DARK_SEA_GREEN_4=`tput setaf 71`
+export FOREGROUND_CADET_BLUE=`tput setaf 72`
+export FOREGROUND_CADET_BLUE_2=`tput setaf 73`
+export FOREGROUND_SKY_BLUE_3=`tput setaf 74`
+export FOREGROUND_STEEL_BLUE_1_2=`tput setaf 75`
+export FOREGROUND_CHARTREUSE_2=`tput setaf 76`
+export FOREGROUND_PALE_GREEN_4=`tput setaf 77`
+export FOREGROUND_SEA_GREEN_4=`tput setaf 78`
+export FOREGROUND_AQUAMARINE_3=`tput setaf 79`
 
 export FOREGROUND_MEDIUM_TURQUOISE=`tput setaf 80`
-export FOREGROUND_BRIGHT_GREEN=`tput setaf 82`
+export FOREGROUND_STEEL_BLUE_1=`tput setaf 81`
+export FOREGROUND_CHARTREUSE_1=`tput setaf 82`
+export FOREGROUND_SEA_GREEN_3=`tput setaf 83`
+export FOREGROUND_SEA_GREEN_2=`tput setaf 84`
+export FOREGROUND_SEA_GREEN_1=`tput setaf 85`
+export FOREGROUND_AQUAMARINE_1=`tput setaf 86`
+export FOREGROUND_DARK_SLATE_GRAY_2=`tput setaf 87`
+export FOREGROUND_MAROON=`tput setaf 88` # Dark Red/Maroon(w3c)
+export FOREGROUND_DEEP_PINK_4_2=`tput setaf 89`
 
-export FOREGROUND_RED_4=`tput setaf 88` # Dark Red/Maroon(w3c)
-
-export FOREGROUND_MAGENTA_4=`tput setaf 90` # Dark Magenta/Purple(w3c)
+export FOREGROUND_DARK_MAGENTA=`tput setaf 90` # Dark Magenta/Purple(w3c)
 export FOREGROUND_GRAPE=`tput setaf 91`
 export FOREGROUND_DARK_VIOLET=`tput setaf 92`
-export FOREGROUND_VIOLET=`tput setaf 93`
+export FOREGROUND_PURPLE_2=`tput setaf 93`
 export FOREGROUND_SADDLE_BROWN=`tput setaf 94`
+export FOREGROUND_LIGHT_PINK_4=`tput setaf 95`
+export FOREGROUND_PLUM_4=`tput setaf 96`
 export FOREGROUND_ROYAL_PURPLE=`tput setaf 97`
+export FOREGROUND_MEDIUM_PURPLE_3=`tput setaf 98`
+export FOREGROUND_SLATE_BLUE_1=`tput setaf 99`
 
 export FOREGROUND_YELLOW_4=`tput setaf 100` # Olive
-export FOREGROUND_GRAY=`tput setaf 102`
+export FOREGROUND_WHEAT_4=`tput setaf 101`
+export FOREGROUND_GRAY_53=`tput setaf 102` # GRAY
+export FOREGROUND_LIGHT_SLATE_GRAY=`tput setaf 103`
 export FOREGROUND_MEDIUM_PURPLE=`tput setaf 104`
-export FOREGROUND_MEDIUM_SLATE_BLUE=`tput setaf 105`
+export FOREGROUND_LIGHT_SLATE_BLUE=`tput setaf 105`
 export FOREGROUND_APPLE_GREEN=`tput setaf 106`
 export FOREGROUND_PISTACHIO=`tput setaf 107`
 export FOREGROUND_DARK_SEA_GREEN=`tput setaf 108`
+export FOREGROUND_LIGHT_SKY_BLUE_3=`tput setaf 109`
 
-export FOREGROUND_YELLOW_GREEN=`tput setaf 112`
-export FOREGROUND_LIGHT_SKY_BLUE=`tput setaf 117` # Sky Blue?
-export FOREGROUND_CHARTREUSE=`tput setaf 118` #LawnGreen
+export FOREGROUND_LIGHT_SKY_BLUE_2=`tput setaf 110`
+export FOREGROUND_SKY_BLUE_2=`tput setaf 111`
+export FOREGROUND_YELLOW_GREEN=`tput setaf 112` # YellowGreen
+export FOREGROUND_DARK_OLIVE_GREEN_3_2=`tput setaf 113`
+export FOREGROUND_PALE_GREEN_3=`tput setaf 114`
+export FOREGROUND_DARK_SEA_GREEN_3=`tput setaf 115`
+export FOREGROUND_DARK_SLATE_GRAY_3=`tput setaf 116`
+export FOREGROUND_SKY_BLUE_1=`tput setaf 117` # Sky Blue?
+export FOREGROUND_LAWN_GREEN=`tput setaf 118` #LawnGreen
+export FOREGROUND_LIGHT_GREEN_2=`tput setaf 119`
 
-export FOREGROUND_PALE_GREEN=`tput setaf 120` # Light green?
+export FOREGROUND_LIGHT_GREEN=`tput setaf 120`
+export FOREGROUND_PALE_GREEN_1=`tput setaf 121`
 export FOREGROUND_AQUAMARINE=`tput setaf 122`
+export FOREGROUND_DARK_SLATE_GRAY_1=`tput setaf 123`
 export FOREGROUND_RED_3=`tput setaf 124` # Firebrick
-export FOREGROUND_MAROON=`tput setaf 125`
+export FOREGROUND_DEEP_PINK_4=`tput setaf 125`
+export FOREGROUND_MEDIUM_VIOLET_RED=`tput setaf 126`
 export FOREGROUND_MAGENTA_3=`tput setaf 127`
+export FOREGROUND_DARK_VIOLET_2=`tput setaf 128`
 export FOREGROUND_PURPLE=`tput setaf 129`
 
-export FOREGROUND_CHOCOLATE=`tput setaf 130` # Sienna?
-export FOREGROUND_LAVENDER=`tput setaf 133`
+export FOREGROUND_CHOCOLATE=`tput setaf 130` # Sienna?/Chocolate?
+export FOREGROUND_INDIAN_RED=`tput setaf 131`
+export FOREGROUND_HOT_PINK_3_2=`tput setaf 132`
+export FOREGROUND_MEDIUM_ORCHID_3=`tput setaf 133` # Lavender?
 export FOREGROUND_MEDIUM_ORCHID=`tput setaf 134`
-export FOREGROUND_RICH_LILAC=`tput setaf 135`
+export FOREGROUND_MEDIUM_PURPLE_3_2=`tput setaf 135` # RichLilac
 export FOREGROUND_DARK_GOLDEN_ROD=`tput setaf 136`
-export FOREGROUND_DARK_KHAKI=`tput setaf 137`
+export FOREGROUND_LIGHT_SALMON_3_2=`tput setaf 137` # DarkKhaki
 export FOREGROUND_ROSY_BROWN=`tput setaf 138`
+export FOREGROUND_GRAY_63=`tput setaf 139`
 
-export FOREGROUND_YELLOW_3=`tput setaf 142`
-export FOREGROUND_LIGHT_GRAY=`tput setaf 145`
+export FOREGROUND_MEDIUM_PURPLE_2=`tput setaf 140`
+export FOREGROUND_MEDIUM_PURPLE_1=`tput setaf 141`
+export FOREGROUND_GOLD_3=`tput setaf 142`
+export FOREGROUND_DARK_KHAKI=`tput setaf 143`
+export FOREGROUND_WHITE_NAVAJO_WHITE_3=`tput setaf 144`
+export FOREGROUND_GRAY_69=`tput setaf 145` # LightGray
+export FOREGROUND_LIGHT_STEEL_BLUE_3=`tput setaf 146`
+export FOREGROUND_LIGHT_STEEL_BLUE=`tput setaf 147`
+export FOREGROUND_YELLOW_3_2=`tput setaf 148`
+export FOREGROUND_DARK_OLIVE_GREEN_3=`tput setaf 149`
 
-export FOREGROUND_LIGHT_STEEL_BLUE=`tput setaf 152`
-export FOREGROUND_LIGHT_BLUE=`tput setaf 153`
-export FOREGROUND_GREEN_YELLOW=`tput setaf 154`
-export FOREGROUND_LIGHT_TURQUOISE=`tput setaf 158`
-export FOREGROUND_POWDER_BLUE=`tput setaf 159`
+export FOREGROUND_DARK_SEA_GREEN_3_2=`tput setaf 150`
+export FOREGROUND_DARK_SEA_GREEN_2=`tput setaf 151`
+export FOREGROUND_LIGHT_CYAN_3=`tput setaf 152` # Light steel blue
+export FOREGROUND_LIGHT_SKY_BLUE_1=`tput setaf 153`
+export FOREGROUND_GREEN_APPLE=`tput setaf 154`
+export FOREGROUND_DARK_OLIVE_GREEN_2=`tput setaf 155`
+export FOREGROUND_PALE_GREEN_1_2=`tput setaf 156`
+export FOREGROUND_DARK_SEA_GREEN_1=`tput setaf 157`
+export FOREGROUND_LIGHT_TURQUOISE=`tput setaf 158` # LightTurquoise
+export FOREGROUND_PALE_TURQUOISE_1=`tput setaf 159` # PowderBlue
 
-export FOREGROUND_RED_2=`tput setaf 160` # Crimson
-export FOREGROUND_MEDIUM_VIOLET_RED=`tput setaf 162`
+export FOREGROUND_CRIMSON=`tput setaf 160` # Crimson
+export FOREGROUND_DEEP_PINK_3_2=`tput setaf 161`
+export FOREGROUND_DEEP_PINK_3=`tput setaf 162`
+export FOREGROUND_MAGENTA_3_2=`tput setaf 163`
 export FOREGROUND_MAGENTA_2=`tput setaf 164`
-export FOREGROUND_INDIAN_RED=`tput setaf 167`
+export FOREGROUND_MAGENTA_2_2=`tput setaf 165`
+export FOREGROUND_DARK_ORANGE_3=`tput setaf 166`
+export FOREGROUND_INDIAN_RED_2=`tput setaf 167`
+export FOREGROUND_HOT_PINK_3=`tput setaf 168`
+export FOREGROUND_HOT_PINK_2=`tput setaf 169`
 
-export FOREGROUND_PERU=`tput setaf 172`
-export FOREGROUND_PALE_VIOLET_RED=`tput setaf 174`
-export FOREGROUND_ORCHID=`tput setaf 176`
+export FOREGROUND_ORCHID=`tput setaf 170`
+export FOREGROUND_MEDIUM_ORCHID_1=`tput setaf 171`
+export FOREGROUND_ORANGE_3=`tput setaf 172`
+export FOREGROUND_LIGHT_SALMON_3=`tput setaf 173`
+export FOREGROUND_LIGHT_PINK_3=`tput setaf 174`
+export FOREGROUND_PINK_3=`tput setaf 175`
+export FOREGROUND_PLUM_3=`tput setaf 176`
+export FOREGROUND_VIOLET=`tput setaf 177`
 export FOREGROUND_GOLDEN_ROD=`tput setaf 178`
+export FOREGROUND_LIGHT_GOLDEN_ROD_3=`tput setaf 179`
 
 export FOREGROUND_TAN=`tput setaf 180` # Tan/Burlywood
-export FOREGROUND_PLUM=`tput setaf 182` # Plum/Thistle
-export FOREGROUND_PERIWINKLE=`tput setaf 183`
+export FOREGROUND_MISTY_ROSE_3=`tput setaf 181`
+export FOREGROUND_THISTLE_2=`tput setaf 182` # Plum/Thistle
+export FOREGROUND_PLUM_2=`tput setaf 183` #Periwinkle?
 export FOREGROUND_YELLOW_2=`tput setaf 184`
-export FOREGROUND_SILVER=`tput setaf 188` # Gainsboro/LightGray/Silver
+export FOREGROUND_KHAKI_3=`tput setaf 185`
+export FOREGROUND_LIGHT_GOLDEN_ROD_2=`tput setaf 186`
+export FOREGROUND_LIGHT_YELLOW_3=`tput setaf 187`
+export FOREGROUND_GRAY_84=`tput setaf 188` # Gainsboro/LightGray/Silver
+export FOREGROUND_LIGHT_STEEL_BLUE_1=`tput setaf 189`
 
+export FOREGROUND_GREEN_YELLOW=`tput setaf 190`
+export FOREGROUND_DARK_OLIVE_GREEN_1=`tput setaf 191`
+export FOREGROUND_DARK_OLIVE_GREEN=`tput setaf 192`
+export FOREGROUND_DARK_SEA_GREEN_1_2=`tput setaf 193`
+export FOREGROUND_HONEYDEW=`tput setaf 194`
+export FOREGROUND_LIGHT_CYAN_1=`tput setaf 195`
 export FOREGROUND_RED_1=`tput setaf 196`
+export FOREGROUND_DEEP_PINK_2=`tput setaf 197`
 export FOREGROUND_DEEP_PINK=`tput setaf 198`
+export FOREGROUND_DEEP_PINK_1=`tput setaf 199`
 
+export FOREGROUND_MAGENTA_1_2=`tput setaf 200`
 export FOREGROUND_MAGENTA_1=`tput setaf 201`
 export FOREGROUND_ORANGE_RED=`tput setaf 202`
 export FOREGROUND_TOMATO=`tput setaf 203`
+export FOREGROUND_INDIAN_RED_1=`tput setaf 204`
 export FOREGROUND_HOT_PINK=`tput setaf 205`
-export FOREGROUND_ORANGE=`tput setaf 208`
-export FOREGROUND_CORAL=`tput setaf 209`
+export FOREGROUND_HOT_PINK_1=`tput setaf 206`
+export FOREGROUND_MEDIUM_ORCHID_1_2=`tput setaf 207`
+export FOREGROUND_DARK_ORANGE=`tput setaf 208`
+export FOREGROUND_SALMON_1=`tput setaf 209` # Coral?
 
-export FOREGROUND_SALMON=`tput setaf 210`
-export FOREGROUND_VIOLET=`tput setaf 213`
+export FOREGROUND_LIGHT_CORAL=`tput setaf 210`
+export FOREGROUND_PALE_VIOLET_RED_1=`tput setaf 211`
+export FOREGROUND_ORCHID_2=`tput setaf 212`
+export FOREGROUND_ORCHID_1=`tput setaf 213`
 export FOREGROUND_LIGHT_ORANGE=`tput setaf 214`
 export FOREGROUND_SANDY_BROWN=`tput setaf 215`
 export FOREGROUND_LIGHT_SALMON=`tput setaf 216`
-export FOREGROUND_LIGHT_APRICOT=`tput setaf 217`
-export FOREGROUND_LIGHT_PINK=`tput setaf 218`
+export FOREGROUND_LIGHT_PINK=`tput setaf 217`
+export FOREGROUND_PINK=`tput setaf 218`
+export FOREGROUND_PLUM=`tput setaf 219`
 
 export FOREGROUND_GOLD=`tput setaf 220`
-export FOREGROUND_PEACHPUFF=`tput setaf 223`
-export FOREGROUND_PINK=`tput setaf 224`
+export FOREGROUND_GOLDEN_ROD_2=`tput setaf 221`
+export FOREGROUND_GOLDEN_ROD_2_2=`tput setaf 222`
+export FOREGROUND_NAVAJO_WHITE_1=`tput setaf 223` # Peachpuff
+export FOREGROUND_MISTY_ROSE=`tput setaf 224`
+export FOREGROUND_THISTLE=`tput setaf 225`
 export FOREGROUND_YELLOW_1=`tput setaf 226`
-export FOREGROUND_LEMON_CHIFFON=`tput setaf 227`
-export FOREGROUND_CREAM=`tput setaf 228`
-export FOREGROUND_MOCCASIN=`tput setaf 229`
+export FOREGROUND_LIGHT_GOLDEN_ROD_1=`tput setaf 227`
+export FOREGROUND_KHAKI=`tput setaf 228`
+export FOREGROUND_WHEAT=`tput setaf 229`
 
 export FOREGROUND_CORNSILK=`tput setaf 230`
+
+export FOREGROUND_GRAY_100=`tput setaf 231`
+export FOREGROUND_GRAY_3=`tput setaf 232`
+export FOREGROUND_GRAY_7=`tput setaf 233`
+export FOREGROUND_GRAY_11=`tput setaf 234`
+export FOREGROUND_GRAY_15=`tput setaf 235`
+export FOREGROUND_GRAY_19=`tput setaf 236`
+export FOREGROUND_GRAY_23=`tput setaf 237`
+export FOREGROUND_GRAY_27=`tput setaf 238`
+export FOREGROUND_GRAY_30=`tput setaf 239`
+export FOREGROUND_GRAY_35=`tput setaf 240`
+export FOREGROUND_GRAY_39=`tput setaf 241`
+export FOREGROUND_GRAY_42=`tput setaf 242`
+export FOREGROUND_GRAY_46=`tput setaf 243`
+export FOREGROUND_GRAY_50=`tput setaf 244`
+export FOREGROUND_GRAY_54=`tput setaf 245`
+export FOREGROUND_GRAY_58=`tput setaf 246`
+export FOREGROUND_GRAY_62=`tput setaf 247`
+export FOREGROUND_GRAY_66=`tput setaf 248`
+export FOREGROUND_GRAY_70=`tput setaf 249`
+export FOREGROUND_GRAY_74=`tput setaf 250`
+export FOREGROUND_GRAY_78=`tput setaf 251`
+export FOREGROUND_GRAY_82=`tput setaf 252`
+export FOREGROUND_GRAY_85=`tput setaf 253`
+export FOREGROUND_GRAY_89=`tput setaf 254`
+export FOREGROUND_GRAY_93=`tput setaf 255`
 
 trap reset_highlight_colors SIGINT
 function reset_highlight_colors
@@ -290,7 +397,7 @@ do
             shift 2
             ;;
 
-        -n | --no-color)
+        -n | --no-color | --nc)
             set_search_string $1 $2
             COLOR_STRING='$&'
             shift 2
@@ -446,15 +553,15 @@ do
             shift 2
             ;;
 
-        --blue5)
+        --blue5 | --navy-blue)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_BLUE_5}$&"
+            COLOR_STRING="${FOREGROUND_NAVY_BLUE}$&"
             shift 2
             ;;
 
-        --blue4)
+        --blue4 | --dark-blue)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_BLUE_4}$&"
+            COLOR_STRING="${FOREGROUND_DARK_BLUE}$&"
             shift 2
             ;;
 
@@ -478,25 +585,25 @@ do
 
         --cyan5)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_CYAN_5}$&"
+            COLOR_STRING="${FOREGROUND_DEEP_SKY_BLUE_4_3}$&"
             shift 2
             ;;
 
         --cyan4)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_CYAN_4}$&"
+            COLOR_STRING="${FOREGROUND_TURQUOISE_4}$&"
             shift 2
             ;;
 
         --cyan3)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_CYAN_3}$&"
+            COLOR_STRING="${FOREGROUND_LIGHT_SEA_GREEN}$&"
             shift 2
             ;;
 
         --cyan2)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_CYAN_2}$&"
+            COLOR_STRING="${FOREGROUND_DARK_TURQUOISE}$&"
             shift 2
             ;;
 
@@ -506,9 +613,9 @@ do
             shift 2
             ;;
 
-        --green5)
+        --green5 | --dark-green)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_GREEN_5}$&"
+            COLOR_STRING="${FOREGROUND_DARK_GREEN}$&"
             shift 2
             ;;
 
@@ -538,11 +645,11 @@ do
 
         --yellow5)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_YELLOW_5}$&"
+            COLOR_STRING="${FOREGROUND_ORANGE_4}$&"
             shift 2
             ;;
 
-        --yellow4)
+        --yellow4 | --olive) # keep olive here?
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_YELLOW_4}$&"
             shift 2
@@ -550,7 +657,7 @@ do
 
         --yellow3)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_YELLOW_3}$&"
+            COLOR_STRING="${FOREGROUND_GOLD_3}$&"
             shift 2
             ;;
 
@@ -568,13 +675,13 @@ do
 
         --red5)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_RED_5}$&"
+            COLOR_STRING="${FOREGROUND_DARK_RED}$&"
             shift 2
             ;;
 
-        --red4)
+        --red4 | --maroon)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_RED_4}$&"
+            COLOR_STRING="${FOREGROUND_MAROON}$&"
             shift 2
             ;;
 
@@ -584,9 +691,9 @@ do
             shift 2
             ;;
 
-        --red2)
+        --red2 | --crimson)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_RED_2}$&"
+            COLOR_STRING="${FOREGROUND_CRIMSON}$&"
             shift 2
             ;;
 
@@ -598,13 +705,13 @@ do
 
         --magenta5)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_MAGENTA_5}$&"
+            COLOR_STRING="${FOREGROUND_DEEP_PINK_5}$&"
             shift 2
             ;;
 
-        --magenta4)
+        --magenta4 | --dark-magenta)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_MAGENTA_4}$&"
+            COLOR_STRING="${FOREGROUND_DARK_MAGENTA}$&"
             shift 2
             ;;
 
@@ -709,6 +816,24 @@ do
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_LIGHT_GRAY}$&"
             shift 2
+            ;;
+
+        --code | --color-code | --fc | --foreground-code | --fgc)
+            if [[ $2 =~ ^[0-9]+$ ]] && [ $2 -ge 0 ] && [ $2 -lt 256 ]
+            then
+                if [ -z $3 ]
+                then
+                    echo "highlight: ${BOLD_FONT}$1 $2${RESET_ALL} must be followed by a search string." >&2
+                    exit 1
+                else
+                    SEARCH_STRING=$3
+                    COLOR_STRING="`tput setaf $2`$&"
+                    shift 3
+                fi
+            else
+                echo "highlight: ${BOLD_FONT}$1${RESET_ALL} must be followed by a number [0-255]." >&2
+                exit 1
+            fi
             ;;
 
         \? | -h | --help | --colors)
