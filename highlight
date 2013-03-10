@@ -32,32 +32,32 @@ export FOREGROUND_BRIGHT_WHITE=`tput setaf 15`
 
 export FOREGROUND_GRAY_0=`tput setaf 16`
 export FOREGROUND_NAVY_BLUE=`tput setaf 17`
-export FOREGROUND_DARK_BLUE=`tput setaf 18` # MidnightBlue
+export FOREGROUND_DARK_BLUE=`tput setaf 18`
 export FOREGROUND_BLUE_3=`tput setaf 19`
 
 export FOREGROUND_BLUE_2=`tput setaf 20`
 export FOREGROUND_BLUE_1=`tput setaf 21`
 export FOREGROUND_DARK_GREEN=`tput setaf 22`
-export FOREGROUND_DEEP_SKY_BLUE_4_3=`tput setaf 23` # CYAN5
+export FOREGROUND_DEEP_SKY_BLUE_4_3=`tput setaf 23`
 export FOREGROUND_DEEP_SKY_BLUE_4_2=`tput setaf 24`
 export FOREGROUND_DEEP_SKY_BLUE_4=`tput setaf 25`
 export FOREGROUND_DODGER_BLUE_3=`tput setaf 26`
-export FOREGROUND_DODGER_BLUE_2=`tput setaf 27` # DodgerBlue
-export FOREGROUND_GREEN_4=`tput setaf 28` # Forest Green
+export FOREGROUND_DODGER_BLUE_2=`tput setaf 27`
+export FOREGROUND_GREEN_4=`tput setaf 28`
 export FOREGROUND_SPRING_GREEN_4=`tput setaf 29`
 
 export FOREGROUND_TURQUOISE_4=`tput setaf 30`
-export FOREGROUND_DEEP_SKY_BLUE_3_2=`tput setaf 31` # LightSeaGreen/Aqua
+export FOREGROUND_DEEP_SKY_BLUE_3_2=`tput setaf 31`
 export FOREGROUND_DEEP_SKY_BLUE_3=`tput setaf 32`
-export FOREGROUND_DODGER_BLUE_1=`tput setaf 33` # LightDodgerBlue
+export FOREGROUND_DODGER_BLUE_1=`tput setaf 33`
 export FOREGROUND_GREEN_3=`tput setaf 34`
 export FOREGROUND_SPRING_GREEN_3_2=`tput setaf 35`
-export FOREGROUND_DARK_CYAN=`tput setaf 36` # CaribbeanGreen
-export FOREGROUND_LIGHT_SEA_GREEN=`tput setaf 37` # LightSeaGreen
+export FOREGROUND_DARK_CYAN=`tput setaf 36`
+export FOREGROUND_LIGHT_SEA_GREEN=`tput setaf 37`
 export FOREGROUND_DEEP_SKY_BLUE_2=`tput setaf 38`
 export FOREGROUND_DEEP_SKY_BLUE_1=`tput setaf 39`
 
-export FOREGROUND_GREEN_2=`tput setaf 40` # LimeGreen
+export FOREGROUND_GREEN_2=`tput setaf 40`
 export FOREGROUND_SPRING_GREEN_3=`tput setaf 41`
 export FOREGROUND_SPRING_GREEN_2_2=`tput setaf 42`
 export FOREGROUND_CYAN_3=`tput setaf 43`
@@ -75,8 +75,8 @@ export FOREGROUND_DEEP_PINK_5=`tput setaf 53`
 export FOREGROUND_PURPLE_4_2=`tput setaf 54`
 export FOREGROUND_PURPLE_4=`tput setaf 55`
 export FOREGROUND_PURPLE_3=`tput setaf 56`
-export FOREGORUND_BLUE_VIOLET=`tput setaf 57`
-export FOREGROUND_ORANGE_4=`tput setaf 58` # Dark Olive Green
+export FOREGROUND_BLUE_VIOLET=`tput setaf 57`
+export FOREGROUND_ORANGE_4=`tput setaf 58`
 export FOREGROUND_GRAY_37=`tput setaf 59`
 
 export FOREGROUND_MEDIUM_PURPLE_4=`tput setaf 60`
@@ -85,34 +85,34 @@ export FOREGROUND_SLATE_BLUE_2=`tput setaf 62`
 export FOREGROUND_ROYAL_BLUE=`tput setaf 63`
 export FOREGROUND_CHARTREUSE_4=`tput setaf 64`
 export FOREGROUND_DARK_SEA_GREEN_4_2=`tput setaf 65`
-export FOREGROUND_PALE_TURQUOISE_2=`tput setaf 66`
+export FOREGROUND_PALE_TURQUOISE=`tput setaf 66`
 export FOREGROUND_STEEL_BLUE=`tput setaf 67`
 export FOREGROUND_STEEL_BLUE_3=`tput setaf 68`
 export FOREGROUND_CORN_FLOWER_BLUE=`tput setaf 69`
 
 export FOREGROUND_CHARTREUSE_3=`tput setaf 70`
 export FOREGROUND_DARK_SEA_GREEN_4=`tput setaf 71`
-export FOREGROUND_CADET_BLUE=`tput setaf 72`
-export FOREGROUND_CADET_BLUE_2=`tput setaf 73`
+export FOREGROUND_CADET_BLUE_2=`tput setaf 72`
+export FOREGROUND_CADET_BLUE=`tput setaf 73`
 export FOREGROUND_SKY_BLUE_3=`tput setaf 74`
-export FOREGROUND_STEEL_BLUE_1_2=`tput setaf 75`
+export FOREGROUND_STEEL_BLUE_1=`tput setaf 75`
 export FOREGROUND_CHARTREUSE_2=`tput setaf 76`
 export FOREGROUND_PALE_GREEN_4=`tput setaf 77`
 export FOREGROUND_SEA_GREEN_4=`tput setaf 78`
 export FOREGROUND_AQUAMARINE_3=`tput setaf 79`
 
 export FOREGROUND_MEDIUM_TURQUOISE=`tput setaf 80`
-export FOREGROUND_STEEL_BLUE_1=`tput setaf 81`
+export FOREGROUND_STEEL_BLUE_2=`tput setaf 81`
 export FOREGROUND_CHARTREUSE_1=`tput setaf 82`
 export FOREGROUND_SEA_GREEN_3=`tput setaf 83`
 export FOREGROUND_SEA_GREEN_2=`tput setaf 84`
 export FOREGROUND_SEA_GREEN_1=`tput setaf 85`
 export FOREGROUND_AQUAMARINE_1=`tput setaf 86`
 export FOREGROUND_DARK_SLATE_GRAY_2=`tput setaf 87`
-export FOREGROUND_MAROON=`tput setaf 88` # Dark Red/Maroon(w3c)
+export FOREGROUND_MAROON=`tput setaf 88`
 export FOREGROUND_DEEP_PINK_4_2=`tput setaf 89`
 
-export FOREGROUND_DARK_MAGENTA=`tput setaf 90` # Dark Magenta/Purple(w3c)
+export FOREGROUND_DARK_MAGENTA=`tput setaf 90`
 export FOREGROUND_GRAPE=`tput setaf 91`
 export FOREGROUND_DARK_VIOLET=`tput setaf 92`
 export FOREGROUND_PURPLE_2=`tput setaf 93`
@@ -123,9 +123,9 @@ export FOREGROUND_ROYAL_PURPLE=`tput setaf 97`
 export FOREGROUND_MEDIUM_PURPLE_3=`tput setaf 98`
 export FOREGROUND_SLATE_BLUE_1=`tput setaf 99`
 
-export FOREGROUND_YELLOW_4=`tput setaf 100` # Olive
+export FOREGROUND_YELLOW_4=`tput setaf 100`
 export FOREGROUND_WHEAT_4=`tput setaf 101`
-export FOREGROUND_GRAY_53=`tput setaf 102` # GRAY
+export FOREGROUND_GRAY_53=`tput setaf 102`
 export FOREGROUND_LIGHT_SLATE_GRAY=`tput setaf 103`
 export FOREGROUND_MEDIUM_PURPLE=`tput setaf 104`
 export FOREGROUND_LIGHT_SLATE_BLUE=`tput setaf 105`
@@ -136,34 +136,34 @@ export FOREGROUND_LIGHT_SKY_BLUE_3=`tput setaf 109`
 
 export FOREGROUND_LIGHT_SKY_BLUE_2=`tput setaf 110`
 export FOREGROUND_SKY_BLUE_2=`tput setaf 111`
-export FOREGROUND_YELLOW_GREEN=`tput setaf 112` # YellowGreen
+export FOREGROUND_YELLOW_GREEN=`tput setaf 112`
 export FOREGROUND_DARK_OLIVE_GREEN_3_2=`tput setaf 113`
 export FOREGROUND_PALE_GREEN_3=`tput setaf 114`
 export FOREGROUND_DARK_SEA_GREEN_3=`tput setaf 115`
 export FOREGROUND_DARK_SLATE_GRAY_3=`tput setaf 116`
-export FOREGROUND_SKY_BLUE_1=`tput setaf 117` # Sky Blue?
-export FOREGROUND_LAWN_GREEN=`tput setaf 118` #LawnGreen
+export FOREGROUND_SKY_BLUE_1=`tput setaf 117`
+export FOREGROUND_LAWN_GREEN=`tput setaf 118`
 export FOREGROUND_LIGHT_GREEN_2=`tput setaf 119`
 
 export FOREGROUND_LIGHT_GREEN=`tput setaf 120`
 export FOREGROUND_PALE_GREEN_1=`tput setaf 121`
 export FOREGROUND_AQUAMARINE=`tput setaf 122`
 export FOREGROUND_DARK_SLATE_GRAY_1=`tput setaf 123`
-export FOREGROUND_RED_3=`tput setaf 124` # Firebrick
+export FOREGROUND_RED_3=`tput setaf 124`
 export FOREGROUND_DEEP_PINK_4=`tput setaf 125`
 export FOREGROUND_MEDIUM_VIOLET_RED=`tput setaf 126`
 export FOREGROUND_MAGENTA_3=`tput setaf 127`
 export FOREGROUND_DARK_VIOLET_2=`tput setaf 128`
 export FOREGROUND_PURPLE=`tput setaf 129`
 
-export FOREGROUND_CHOCOLATE=`tput setaf 130` # Sienna?/Chocolate?
+export FOREGROUND_CHOCOLATE=`tput setaf 130`
 export FOREGROUND_INDIAN_RED=`tput setaf 131`
 export FOREGROUND_HOT_PINK_3_2=`tput setaf 132`
-export FOREGROUND_MEDIUM_ORCHID_3=`tput setaf 133` # Lavender?
+export FOREGROUND_LAVENDER=`tput setaf 133`
 export FOREGROUND_MEDIUM_ORCHID=`tput setaf 134`
-export FOREGROUND_MEDIUM_PURPLE_3_2=`tput setaf 135` # RichLilac
+export FOREGROUND_RICH_LILAC=`tput setaf 135`
 export FOREGROUND_DARK_GOLDEN_ROD=`tput setaf 136`
-export FOREGROUND_LIGHT_SALMON_3_2=`tput setaf 137` # DarkKhaki
+export FOREGROUND_LIGHT_SALMON_3_2=`tput setaf 137`
 export FOREGROUND_ROSY_BROWN=`tput setaf 138`
 export FOREGROUND_GRAY_63=`tput setaf 139`
 
@@ -172,7 +172,7 @@ export FOREGROUND_MEDIUM_PURPLE_1=`tput setaf 141`
 export FOREGROUND_GOLD_3=`tput setaf 142`
 export FOREGROUND_DARK_KHAKI=`tput setaf 143`
 export FOREGROUND_WHITE_NAVAJO_WHITE_3=`tput setaf 144`
-export FOREGROUND_GRAY_69=`tput setaf 145` # LightGray
+export FOREGROUND_GRAY_69=`tput setaf 145`
 export FOREGROUND_LIGHT_STEEL_BLUE_3=`tput setaf 146`
 export FOREGROUND_LIGHT_STEEL_BLUE=`tput setaf 147`
 export FOREGROUND_YELLOW_3_2=`tput setaf 148`
@@ -180,16 +180,16 @@ export FOREGROUND_DARK_OLIVE_GREEN_3=`tput setaf 149`
 
 export FOREGROUND_DARK_SEA_GREEN_3_2=`tput setaf 150`
 export FOREGROUND_DARK_SEA_GREEN_2=`tput setaf 151`
-export FOREGROUND_LIGHT_CYAN_3=`tput setaf 152` # Light steel blue
+export FOREGROUND_LIGHT_CYAN_3=`tput setaf 152`
 export FOREGROUND_LIGHT_SKY_BLUE_1=`tput setaf 153`
 export FOREGROUND_GREEN_APPLE=`tput setaf 154`
 export FOREGROUND_DARK_OLIVE_GREEN_2=`tput setaf 155`
 export FOREGROUND_PALE_GREEN_1_2=`tput setaf 156`
 export FOREGROUND_DARK_SEA_GREEN_1=`tput setaf 157`
-export FOREGROUND_LIGHT_TURQUOISE=`tput setaf 158` # LightTurquoise
-export FOREGROUND_PALE_TURQUOISE_1=`tput setaf 159` # PowderBlue
+export FOREGROUND_LIGHT_TURQUOISE=`tput setaf 158`
+export FOREGROUND_POWDER_BLUE=`tput setaf 159`
 
-export FOREGROUND_CRIMSON=`tput setaf 160` # Crimson
+export FOREGROUND_CRIMSON=`tput setaf 160`
 export FOREGROUND_DEEP_PINK_3_2=`tput setaf 161`
 export FOREGROUND_DEEP_PINK_3=`tput setaf 162`
 export FOREGROUND_MAGENTA_3_2=`tput setaf 163`
@@ -211,15 +211,15 @@ export FOREGROUND_VIOLET=`tput setaf 177`
 export FOREGROUND_GOLDEN_ROD=`tput setaf 178`
 export FOREGROUND_LIGHT_GOLDEN_ROD_3=`tput setaf 179`
 
-export FOREGROUND_TAN=`tput setaf 180` # Tan/Burlywood
+export FOREGROUND_TAN=`tput setaf 180`
 export FOREGROUND_MISTY_ROSE_3=`tput setaf 181`
-export FOREGROUND_THISTLE_2=`tput setaf 182` # Plum/Thistle
+export FOREGROUND_THISTLE_2=`tput setaf 182`
 export FOREGROUND_PLUM_2=`tput setaf 183` #Periwinkle?
 export FOREGROUND_YELLOW_2=`tput setaf 184`
 export FOREGROUND_KHAKI_3=`tput setaf 185`
 export FOREGROUND_LIGHT_GOLDEN_ROD_2=`tput setaf 186`
 export FOREGROUND_LIGHT_YELLOW_3=`tput setaf 187`
-export FOREGROUND_GRAY_84=`tput setaf 188` # Gainsboro/LightGray/Silver
+export FOREGROUND_GRAY_84=`tput setaf 188`
 export FOREGROUND_LIGHT_STEEL_BLUE_1=`tput setaf 189`
 
 export FOREGROUND_GREEN_YELLOW=`tput setaf 190`
@@ -258,7 +258,7 @@ export FOREGROUND_PLUM=`tput setaf 219`
 export FOREGROUND_GOLD=`tput setaf 220`
 export FOREGROUND_GOLDEN_ROD_2=`tput setaf 221`
 export FOREGROUND_GOLDEN_ROD_2_2=`tput setaf 222`
-export FOREGROUND_NAVAJO_WHITE_1=`tput setaf 223` # Peachpuff
+export FOREGROUND_NAVAJO_WHITE=`tput setaf 223` # Peachpuff
 export FOREGROUND_MISTY_ROSE=`tput setaf 224`
 export FOREGROUND_THISTLE=`tput setaf 225`
 export FOREGROUND_YELLOW_1=`tput setaf 226`
@@ -477,7 +477,7 @@ do
 
         --bright-yellow)
             set_search_string $1 $2
-            COLOR_STRING="{FOREGROUND_BRIGHT_YELLOW}$&"
+            COLOR_STRING="${FOREGROUND_BRIGHT_YELLOW}$&"
             shift 2
             ;;
 
@@ -619,7 +619,7 @@ do
             shift 2
             ;;
 
-        --green4)
+        --green4 | --forest-green)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_GREEN_4}$&"
             shift 2
@@ -631,7 +631,7 @@ do
             shift 2
             ;;
 
-        --green2)
+        --green2 | --lime-green)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_GREEN_2}$&"
             shift 2
@@ -649,7 +649,7 @@ do
             shift 2
             ;;
 
-        --yellow4 | --olive) # keep olive here?
+        --yellow4 | --olive)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_YELLOW_4}$&"
             shift 2
@@ -685,7 +685,7 @@ do
             shift 2
             ;;
 
-        --red3)
+        --red3 | --fire-brick)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_RED_3}$&"
             shift 2
@@ -733,28 +733,27 @@ do
             shift 2
             ;;
 
-        # Add more color things here
-        --bright-sea-green)
-            set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_BRIGHT_SEA_GREEN}$&"
-            shift 2
-            ;;
-
         --light-sea-green)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_LIGHT_SEA_GREEN}$&"
+            COLOR_STRING="${FOREGROUND_SEA_GREEN_3}$&"
             shift 2
             ;;
 
-        --sea-green)
+        --sea-green | --sea-green1)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_SEA_GREEN}$&"
+            COLOR_STRING="${FOREGROUND_SEA_GREEN_4}$&"
             shift 2
             ;;
 
         --dark-sea-green)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_DARK_SEA_GREEN}$&"
+            shift 2
+            ;;
+
+        --caribbean-green)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_CYAN}$&"
             shift 2
             ;;
 
@@ -776,9 +775,465 @@ do
             shift 2
             ;;
 
+        --dark-gold)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_GOLDEN_ROD}$&"
+            shift 2
+            ;;
+
         --light-orange)
             set_search_string $1 $2
             COLOR_STRING="${FOREGROUND_LIGHT_ORANGE}$&"
+            shift 2
+            ;;
+
+        --deep-sky-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DEEP_SKY_BLUE_1}$&"
+            shift 2
+            ;;
+
+         --dodger-blue3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DODGER_BLUE_3}$&"
+            shift 2
+            ;;
+
+         --dodger-blue2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DODGER_BLUE_2}$&"
+            shift 2
+            ;;
+
+         --dodger-blue | --dodger-blue1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DODGER_BLUE_1}$&"
+            shift 2
+            ;;
+
+        --spring-green)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SPRING_GREEN_1}$&"
+            shift 2
+            ;;
+
+        --turquoise | --turq)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_TURQUOISE_2}$&"
+            shift 2
+            ;;
+
+        --dark-turquoise | --dark-turq)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_TURQUOISE_4}$&"
+            shift 2
+            ;;
+
+        --purple4)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PURPLE_4_2}$&"
+            shift 2
+            ;;
+
+        --purple3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PURPLE_4}$&"
+            shift 2
+            ;;
+
+        --purple2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PURPLE_3}$&"
+            shift 2
+            ;;
+
+        --purple1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PURPLE_2}$&"
+            shift 2
+            ;;
+
+        --purple | --purple1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PURPLE}$&"
+            shift 2
+            ;;
+
+        --violet)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_VIOLET}$&"
+            shift 2
+            ;;
+
+        --dark-violet)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_VIOLET}$&"
+            shift 2
+            ;;
+
+        --blue-violet)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_BLUE_VIOLET}$&"
+            shift 2
+            ;;
+
+        --slate-blue3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SLATE_BLUE_3}$&"
+            shift 2
+            ;;
+
+        --slate-blue2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SLATE_BLUE_2}$&"
+            shift 2
+            ;;
+
+        --slate-blue | --slate-blue1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SLATE_BLUE_1}$&"
+            shift 2
+            ;;
+
+        --royal-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_ROYAL_BLUE}$&"
+            shift 2
+            ;;
+
+        --royal-purple)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_ROYAL_PURPLE}$&"
+            shift 2
+            ;;
+
+        --lavender)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LAVENDER}$&"
+            shift 2
+            ;;
+
+        --rich-lilac)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_RICH_LILAC}$&"
+            shift 2
+            ;;
+
+        --chartreuse4)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CHARTREUSE_4}$&"
+            shift 2
+            ;;
+
+        --chartreuse3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CHARTREUSE_3}$&"
+            shift 2
+            ;;
+
+        --chartreuse2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CHARTREUSE_2}$&"
+            shift 2
+            ;;
+
+        --chartreuse | --chartreuse1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CHARTREUSE_1}$&"
+            shift 2
+            ;;
+
+        --light-steel-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_CYAN_3}$&"
+            shift 2
+            ;;
+
+        --steel-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_STEEL_BLUE}$&"
+            shift 2
+            ;;
+
+        --corn-flower-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CORN_FLOWER_BLUE}$&"
+            shift 2
+            ;;
+
+        --cadet-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CADET_BLUE}$&"
+            shift 2
+            ;;
+
+        --pale-green3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PALE_GREEN_3}$&"
+            shift 2
+            ;;
+
+        --pale-green2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PALE_GREEN_2}$&"
+            shift 2
+            ;;
+
+        --pale-green | --pale-green1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PALE_GREEN_1}$&"
+            shift 2
+            ;;
+
+        --medium-turquoise | --medium-turq | --med-turq)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_MEDIUM_TURQUOISE}$&"
+            shift 2
+            ;;
+
+        --aquamarine)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_AQUAMARINE}$&"
+            shift 2
+            ;;
+
+        --grape)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_GRAPE}$&"
+            shift 2
+            ;;
+
+        --saddle-brown)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SADDLE_BROWN}$&"
+            shift 2
+            ;;
+
+        --sandy-brown)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SANDY_BROWN}$&"
+            shift 2
+            ;;
+
+        --plum)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PLUM}$&"
+            shift 2
+            ;;
+
+        --wheat)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_WHEAT}$&"
+            shift 2
+            ;;
+
+        --light-pistachio)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_GOLDEN_ROD_2}$&"
+            shift 2
+            ;;
+
+        --pistachio)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PISTACHIO}$&"
+            shift 2
+            ;;
+
+        --light-turquoise)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_TURQUOISE}$&"
+            shift 2
+            ;;
+
+        --powder-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_POWDER_BLUE}$&"
+            shift 2
+            ;;
+
+        --light-sky-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_SKY_BLUE_1}$&"
+            shift 2
+            ;;
+
+        --sky-blue)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SKY_BLUE_1}$&"
+            shift 2
+            ;;
+
+        --yellow-green)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_YELLOW_GREEN}$&"
+            shift 2
+            ;;
+
+        --dark-olive-green5)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_OLIVE_GREEN_3_2}$&"
+            shift 2
+            ;;
+
+        --dark-olive-green4)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_OLIVE_GREEN_3}$&"
+            shift 2
+            ;;
+
+        --dark-olive-green3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_OLIVE_GREEN_2}$&"
+            shift 2
+            ;;
+
+        --dark-olive-green2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_OLIVE_GREEN_1}$&"
+            shift 2
+            ;;
+
+        --dark-olive-green | --dark-olive-green1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_OLIVE_GREEN}$&"
+            shift 2
+            ;;
+
+        --lawn-green)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LAWN_GREEN}$&"
+            shift 2
+            ;;
+
+        --deep-pink)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DEEP_PINK}$&"
+            shift 2
+            ;;
+
+        --chocolate)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_CHOCOLATE}$&"
+            shift 2
+            ;;
+
+        --rosy-brown)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_ROSY_BROWN}$&"
+            shift 2
+            ;;
+
+        --indian-red3)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_INDIAN_RED_2}$&"
+            shift 2
+            ;;
+
+        --indian-red2)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_INDIAN_RED_1}$&"
+            shift 2
+            ;;
+
+        --indian-red | --indian-red1)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_INDIAN_RED_2}$&"
+            shift 2
+            ;;
+
+        --medium-orchid)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_MEDIUM_ORCHID}$&"
+            shift 2
+            ;;
+
+        --dark-khaki)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_DARK_KHAKI}$&"
+            shift 2
+            ;;
+
+        --light-khaki)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_KHAKI}$&"
+            shift 2
+            ;;
+
+        --khaki)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_KHAKI_3}$&"
+            shift 2
+            ;;
+
+        --green-apple)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_GREEN_APPLE}$&"
+            shift 2
+            ;;
+
+        --orchid)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_ORCHID}$&"
+            shift 2
+            ;;
+
+        --light-gold)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_GOLDEN_ROD_1}$&"
+            shift 2
+            ;;
+
+        --tan)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_TAN}$&"
+            shift 2
+            ;;
+
+        --misty-rose)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_MISTY_ROSE}$&"
+            shift 2
+            ;;
+
+        --thistle)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_THISTLE}$&"
+            shift 2
+            ;;
+
+        --honeydew)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_HONEYDEW}$&"
+            shift 2
+            ;;
+
+        --tomato)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_TOMATO}$&"
+            shift 2
+            ;;
+
+        --light-coral)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_LIGHT_CORAL}$&"
+            shift 2
+            ;;
+
+        --coral)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_SALMON_1}$&"
+            shift 2
+            ;;
+
+        --periwinkle)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_PLUM_2}$&"
+            shift 2
+            ;;
+
+        --peachpuff | --navajo-white)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_NAVAJO_WHITE}$&"
             shift 2
             ;;
 
@@ -800,25 +1255,31 @@ do
             shift 2
             ;;
 
+        --silver)
+            set_search_string $1 $2
+            COLOR_STRING="${FOREGROUND_GRAY_84}$&"
+            shift 2
+            ;;
+
         --dark-gray | --dark-grey)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_DARK_GRAY}$&"
+            COLOR_STRING="${FOREGROUND_GRAY_37}$&"
             shift 2
             ;;
 
         --gray | --grey)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_GRAY}$&"
+            COLOR_STRING="${FOREGROUND_GRAY_53}$&"
             shift 2
             ;;
 
         --light-gray | --light-grey)
             set_search_string $1 $2
-            COLOR_STRING="${FOREGROUND_LIGHT_GRAY}$&"
+            COLOR_STRING="${FOREGROUND_GRAY_69}$&"
             shift 2
             ;;
 
-        --code | --color-code | --fc | --foreground-code | --fgc)
+        --color-code | --fc | --foreground-code | --fg | --fgc)
             if [[ $2 =~ ^[0-9]+$ ]] && [ $2 -ge 0 ] && [ $2 -lt 256 ]
             then
                 if [ -z $3 ]
