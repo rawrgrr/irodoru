@@ -294,15 +294,15 @@ export FOREGROUND_GRAY_85=`tput setaf 253`
 export FOREGROUND_GRAY_89=`tput setaf 254`
 export FOREGROUND_GRAY_93=`tput setaf 255`
 
-trap reset_highlight_colors SIGINT
-function reset_highlight_colors
+trap reset_irodoru_colors SIGINT
+function reset_irodoru_colors
 {
     echo -e "${RESET_ALL}"
 }
 
 function print_help
 {
-    echo "highlight [-uvz] <color_flag> <search_string> [...]
+    echo "irodoru [-uvz] <color_flag> <search_string> [...]
         Normal color flags:
             -k normal black
             -r normal red
@@ -336,7 +336,7 @@ function print_help
 
 function print_error
 {
-    echo "highlight: ${BOLD_FONT}${1}${RESET_ALL} must be followed by a search string" >&2
+    echo "irodoru: ${BOLD_FONT}${1}${RESET_ALL} must be followed by a search string" >&2
     exit 1
 }
 
@@ -1284,7 +1284,7 @@ do
             then
                 if [ -z $3 ]
                 then
-                    echo "highlight: ${BOLD_FONT}$1 $2${RESET_ALL} must be followed by a search string." >&2
+                    echo "irodoru: ${BOLD_FONT}$1 $2${RESET_ALL} must be followed by a search string." >&2
                     exit 1
                 else
                     SEARCH_STRING=$3
@@ -1292,7 +1292,7 @@ do
                     shift 3
                 fi
             else
-                echo "highlight: ${BOLD_FONT}$1${RESET_ALL} must be followed by a number [0-255]." >&2
+                echo "irodoru: ${BOLD_FONT}$1${RESET_ALL} must be followed by a number [0-255]." >&2
                 exit 1
             fi
             ;;
@@ -1385,5 +1385,5 @@ then
 fi
 
 perl -pe "${FULL_REPLACEMENT_STRING}"
-reset_highlight_colors
+reset_irodoru_colors
 
